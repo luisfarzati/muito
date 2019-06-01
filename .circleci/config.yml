@@ -1,0 +1,58 @@
+version: 2.1
+
+aliases:
+  - &docker
+    - image: circleci/node:12.3.1-stretch
+
+  - &restore_cache
+    restore_cache:
+      name: Restore Yarn Package Cache
+      keys:
+        - yarn-packages-{{ checksum "yarn.lock" }}
+
+  - &run_yarn
+    run:
+      name: Install Dependencies
+      command: yarn install --frozen-lockfile
+
+jobs:
+  setup:
+    docker: *docker
+    steps:
+      - checkout
+      - run: node --version
+      - *restore_cache
+      - *run_yarn
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+
+  build:
+    docker: *docker
+    steps:
+      - checkout
+      - *restore_cache
+      - *run_yarn
+      - run: yarn build
+
+  test:
+    docker: *docker
+    steps:
+      - checkout
+      - *restore_cache
+      - *run_yarn
+      - run: yarn test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - setup
+      - build:
+          requires:
+            - setup
+      - test:
+          requires:
+            - setup
