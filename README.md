@@ -1,5 +1,6 @@
 [![License](https://img.shields.io/github/license/luisfarzati/muito.svg?color=blue)](https://github.com/luisfarzati/muito/blob/master/LICENSE)
-[![CircleCI](https://img.shields.io/circleci/build/github/luisfarzati/muito/master.svg)](https://circleci.com/gh/luisfarzati/muito) 
+[![CircleCI](https://img.shields.io/circleci/build/github/luisfarzati/muito/master.svg)](https://circleci.com/gh/luisfarzati/muito)
+[![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://luisfarzati.github.io/muito/?path=/story/avatar--with-valid-src)
 
 # Muito 
 
@@ -14,6 +15,8 @@ After trying out a few component libraries, I decided to go with MUI. However, i
 Muito provides additional features via new components or by extending MUI components. When it comes to the latter, it will always respect the component interface. You should be able to replace MUI with Muito and everything should still work and look exactly as before.
 
 ## Components
+
+See [the storybook](https://luisfarzati.github.io/muito/?path=/story/avatar--with-valid-src).
 
 ## Avatar
 
