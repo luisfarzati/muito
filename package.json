@@ -1,14 +1,16 @@
 {
   "name": "muito",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
+    "@material-ui/core": "4.0.1",
+    "@material-ui/icons": "4.0.1",
     "@types/jest": "24.0.13",
     "@types/node": "12.0.4",
     "@types/react": "16.8.19",
     "@types/react-dom": "16.8.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-image": "2.1.1",
     "react-scripts": "3.0.1",
     "typescript": "3.5.1"
   },
@@ -16,7 +18,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,5 +37,24 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@storybook/addon-actions": "^5.0.11",
+    "@storybook/addon-info": "5.0.11",
+    "@storybook/addon-links": "^5.0.11",
+    "@storybook/addon-notes": "5.0.11",
+    "@storybook/addon-storyshots": "5.0.11",
+    "@storybook/addons": "^5.0.11",
+    "@storybook/react": "^5.0.11",
+    "@storybook/storybook-deployer": "2.8.1",
+    "@testing-library/react": "8.0.1",
+    "@types/enzyme": "3.9.3",
+    "@types/enzyme-adapter-react-16": "1.0.5",
+    "@types/storybook__react": "4.0.1",
+    "babel-loader": "8.0.5",
+    "enzyme": "3.9.0",
+    "enzyme-adapter-react-16": "1.13.2",
+    "jest-dom": "3.4.0"
   }
 }

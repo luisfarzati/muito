@@ -1,10 +1,60 @@
+# Muito
+
+A collection of React components based on the awesome library Material-UI.
+
+## Why Muito
+
+After trying out a few component libraries, I decided to go with MUI. However, it lacks a few tricks that I've seen in other libs. Muito intends to fill that gap by implementing those features and, why not, maybe more.
+
+## Philosophy
+
+Muito provides additional features via new components or by extending MUI components. When it comes to the latter, it will always respect the component interface. You should be able to replace MUI with Muito and everything should still work and look exactly as before.
+
+## Components
+
+## Avatar
+
+#### Fallback for broken image links
+
+When `src` cannot be loaded or is an invalid link, Avatar will fallback to its empty form.
+
+```jsx
+<Avatar src="invalidLink" />
+```
+
+#### Initials
+
+When `subject` with a `name` is provided, Avatar will render the name initials if `src` is broken or not provided.
+
+```jsx
+<Avatar subject={{ name: "Sarah Connor" }} />
+```
+
+By default, the background color will be deterministically generated from the subject's name. This can be overriden via CSS.
+
+```css
+.fixed-color {
+  background-color: black;
+}
+```
+
+```jsx
+<Avatar classes={{ root: "fixed-color" }} subject={{ name: "Sarah Connor" }} />
+```
+
+### Avatar Set
+
+TODO
+
+## Development
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,12 +62,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
+#### `npm test`
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### `npm run build`
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -27,7 +77,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+#### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -37,7 +87,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
