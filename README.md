@@ -1,4 +1,7 @@
-# Muito
+[![License](https://img.shields.io/github/license/luisfarzati/muito.svg?color=blue)](https://github.com/luisfarzati/muito/blob/master/LICENSE)
+[![CircleCI](https://img.shields.io/circleci/build/github/luisfarzati/muito/master.svg)](https://circleci.com/gh/luisfarzati/muito) 
+
+# Muito 
 
 A collection of React components based on the awesome library Material-UI.
 
