@@ -9,9 +9,7 @@ stories.add("default", () => {
 });
 
 stories.add("with valid src", () => {
-  return (
-    <Avatar src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAABkCAMAAACCTv/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAA5ubmSUUG+gAAAAJ0Uk5T/wDltzBKAAAAPklEQVR42uzYQQ0AAAgDseHfNC4IyVoD912WAACUm3uampqampqamq+aAAD+IVtTU1NTU1NT0z8EAFBsBRgAX+kR+Qam138AAAAASUVORK5CYII=" />
-  );
+  return <Avatar src="https://avatars2.githubusercontent.com/u/107509?v=4" />;
 });
 
 stories.add("with broken src", () => {

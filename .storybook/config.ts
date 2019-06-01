@@ -8,6 +8,12 @@ function loadStories() {
   req.keys().forEach(req);
 }
 
+addParameters({
+  options: {
+    showPanel: false
+  }
+});
+
 addDecorator(
   withInfo({
     inline: true,
